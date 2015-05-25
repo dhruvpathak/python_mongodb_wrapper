@@ -1,5 +1,5 @@
 # python_mongodb_wrapper
-A simple mongodb wrapper class for pymongo driver.
+A simple mongodb wrapper class for pymongo driver. It can be used in python frameworks like Django as well.
 It provides simple interface over pymongo to connect to a mongodb deployment (single,master-slave or replica sets),
 and use the data.
 The class uses Borg pattern to emulate singleton behaviour and hence reuses the connections in 
@@ -23,3 +23,6 @@ students_collection = MongoWrapper().get_mongo_collection(server_key='my_replica
 for student in students_collection.find():
     print(student)
 ```    
+
+To use with Django, put the contents of settings.py in django settings.
+
